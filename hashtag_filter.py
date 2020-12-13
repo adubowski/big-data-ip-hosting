@@ -66,6 +66,6 @@ if __name__ == '__main__':
     #Check if the code worked properly. This is very slow!!!
     if (filtered_df.select('hashtag').distinct().count() =
             df.select(explode('entities.hashtags.text')).distinct().count() - N_HASHTAGS):
-        LOGGER.info("Hastags are filtered properly")
+        LOGGER.info("Hashtags are filtered properly")
     else:
-        raise Exception("Hastags are not filtered properly.")
+        raise Exception("Hashtags are not filtered properly.")
