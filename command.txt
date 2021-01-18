@@ -1,0 +1,1 @@
+PYSPARK_PYTHON=./environment/bin/python time spark-submit --master yarn --deploy-mode cluster --conf spark.yarn.appMasterEnv.PYSPARK_PYTHON=./environment/bin/python --conf spark.dynamicAllocation.maxExecutors=10 --conf spark.files.overwrite=true --archives warc_env.tar.gz#environment get_url_ip_from_way.py
